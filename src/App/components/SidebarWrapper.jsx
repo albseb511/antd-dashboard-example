@@ -18,7 +18,7 @@ const SidebarWrapper = styled.div`
   flex-direction: column;
   padding: 0;
   border-bottom-right-radius: 1rem;
-  background: lightgray;
+  background: #fafafa;
 
   & ul,
   > div {
@@ -43,7 +43,7 @@ const SidebarWrapper = styled.div`
 
 const BottomSidebarWrapper = styled.div`
   margin-top: 50px;
-  background: lightgray;
+  background: #fafafa;
   width: ${width}px;
   height: 100%;
   border-top-right-radius: 1rem;

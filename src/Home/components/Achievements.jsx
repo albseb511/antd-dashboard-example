@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Typography, Row, Button, Image } from 'antd'
+import { Card, Typography, Row, Button, Image, Col } from 'antd'
 import styled from 'styled-components'
 import image from "./img.png"
 
@@ -15,8 +15,10 @@ const AchievementCard = styled(Card)`
 const Achievements = () => {
     return (
         <AchievementCard hoverable>
-            <Row>
-                <Image src={image} />
+            <Row justify="center">
+                <Col>
+                    <Image src={image} width="200px" />
+                </Col>
             </Row>
             <Row>
                 <Typography.Title level={3}>

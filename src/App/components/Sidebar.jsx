@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Avatar, Badge, Row, Col } from "antd";
+import { Menu, Avatar, Badge, Row, Col, Typography } from "antd";
 import {
   HomeFilled,
   BarChartOutlined,
@@ -13,12 +13,14 @@ import {
   IconWrapper,
   PageContainer,
 } from "./SidebarWrapper";
+import { Drawer } from "antd";
 
 class Sidebar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       current: "1",
+      showDrawer: false
     };
   }
 
@@ -33,6 +35,15 @@ class Sidebar extends React.Component {
     return (
       <>
         <MainSidebarWrapper>
+          <Drawer 
+            title="Sidebar"
+            placement="left"
+            closable
+            onClose={()=>this.setState({showDrawer: false})}
+            visible={this.state.showDrawer}
+            >
+              <Typography.Title>Masai</Typography.Title>
+          </Drawer>
           <SidebarWrapper>
             <div>
               <div>
@@ -69,6 +80,7 @@ class Sidebar extends React.Component {
               <Col>
                 <Badge count={2}>
                   <Avatar
+                    onClick={()=>this.setState({showDrawer: true})}
                     src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
                     size={50}
                   />
